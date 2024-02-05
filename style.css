@@ -1,0 +1,137 @@
+/* Estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;/* Reemplaza 'Arial' con la fuente sugerida por Figma*/
+    background-color: #f7f7f7;
+}
+
+#titulo-presentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    margin: 20px 0;
+    justify-content: center;
+    text-align: center;
+}
+#contenido{
+    width: 100%;
+}
+.contenedorPrincipal {
+    display: flex;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+/* Estilo de la sección izquierda (donde se inserte el texto) */
+.seccionIzquierda {
+    width: 50%;
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para la sección izquierda */
+    border: 1px solid #ccc;
+    align-items: flex-start;
+    margin: 10px;
+}
+.seccionIzquierda p{
+    font-weight: bold;
+    padding: 25px;
+}
+
+/* Estilo de la sección derecha (donde se muestra el resultado) */
+.seccionDerecha {
+    width: 50%;
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* Estilos para el textarea */
+#textoOriginal {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px; /* Tamaño de fuente sugerido por Figma */
+}
+
+/* Estilo para el área de presentación */
+#areaPresentacion {
+    width: 98%;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px; /* Tamaño de fuente sugerido por Figma */
+    margin-bottom: 10px; /* Espaciado entre el área de presentación y el botón Copiar */
+    position: relative; /* Asegura que la posición de la imagen sea relativa al área de presentación */
+}
+
+/* Estilo para la imagen */
+#imagenPresentacion {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-height: 100%; /* Ajusta la imagen al alto del contenedor */
+    position: absolute; /* Posiciona la imagen de manera absoluta dentro del área de presentación */
+    top: 0;
+    left: 0;
+}
+
+/* Estilos para los botones */
+button {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave de color y transformación */
+}
+
+/* Estilo para el botón Cifrar */
+#btnCifrar {
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+}
+
+/* Estilo para el botón Descifrar */
+#btnDescifrar {
+    background-color: #2196F3; /* Azul */
+    color: #fff;
+}
+
+/* Estilo para el botón Copiar */
+#btnCopiar {
+    background-color: #FF9800; /* Naranja */
+    color: #fff;
+}
+
+/* Animación al pasar el cursor sobre los botones */
+button:hover {
+    background-color: #555; /* Cambia el color al pasar el cursor */
+    transform: scale(1.05); /* Escala ligeramente el botón */
+}
+.textoCifrado {
+    color: green;
+}
+
+.textoDescifrado {
+    color: blue;
+}
+
+/* Pie de pagina */
+footer{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

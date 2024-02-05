@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cifrador y Descifrador</title>
+</head>
+
+<body>
+    <header id="titulo-presentación">
+        <section>
+            <h1>Cifrador y Descifrador</h1>
+        </section>
+    </header>
+
+    <main id="contenido">
+        <div class="contenedorPrincipal">
+            <!-- Campo para cifrar y descifrar -->
+            <div class="seccionIzquierda">
+                <label for="textoOriginal">Texto:</label>
+                <textarea id="textoOriginal" placeholder="Ingrese su texto aquí"></textarea>
+
+                <!-- Botones -->
+                <button id="btnCifrar" onclick="cifrarTexto()">Cifrar</button>
+                <button id="btnDescifrar" onclick="descifrarTexto()">Descifrar</button>
+
+                <!-- Mensaje de validación -->
+                <p>No se aceptarán mayúsculas ni caracteres especiales.</p>
+            </div>
+
+            <div class="seccionDerecha">
+                <!-- Área de presentación de texto -->
+                <div id="areaPresentacion"></div>
+
+                <!-- Botón de copia -->
+                <button id="btnCopiar" onclick="copiarTexto()">Copiar</button>
+                <button onclick="insertarImagen()">Insertar Imagen</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Desarrollado por Gómez, Elías Matías, &copy; 2024</p>
+    </footer>
+    <!--ads-->
+    <script src="script.js"></script>
+</body>
+
+</html>
