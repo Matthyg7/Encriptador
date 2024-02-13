@@ -139,7 +139,7 @@ textarea {
 
 .mensajes {
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
     width: 336px;
     height: 122px;
     gap: 16px;
@@ -370,7 +370,7 @@ footer {
     }
 }
 /* Tamaños para celulares */
-@media (max-width:320px){
+@media (max-width:350px){
     .contenedorPrincipal {
         display: flex;
         flex-direction: column;
@@ -380,8 +380,8 @@ footer {
         height: 150px;
     }
     #textoOriginal {
-        width: 300px;
-        margin-left: 15px;
+        width: 350px;
+        margin-left: 13px;
     }
     .validacion {
         margin-top: 100px;
@@ -393,13 +393,13 @@ footer {
         margin-left: 15px;
     }
     #btnCifrar {
-        width: 280px;
+        width: 300px;
     }
     #btnDescifrar {
-        width: 280px;
+        width: 300px;
     }
     #seccionDerecha {
-        width: 280px;
+        width: 310px;
         margin-top: 130px;
         margin-left:15px;
     }
@@ -424,7 +424,7 @@ footer {
         padding-top: 15px;
     }
     #areaPresentacion {
-        width: 280px;
+        width: 300px;
         padding: 10px;
         word-wrap: break-word;
     }
@@ -441,8 +441,8 @@ footer {
 
     #btnCopiar {
         position: relative;
-        width: 260px;
-        margin-left: 10px;
+        width: 280px;
+        margin-left: 12px;
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
