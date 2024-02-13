@@ -370,38 +370,38 @@ footer {
     }
 }
 /* Tamaños para celulares */
-@media (max-width:375px){
+@media (max-width:480px){
     .contenedorPrincipal {
         display: flex;
         flex-direction: column;
     }
     .logo {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
     #textoOriginal {
-        width: 380px;
-        margin-left: 13px;
+        width: 440px;
+        margin-left: 15px;
     }
     .validacion {
         margin-top: 100px;
-        margin-left: 15px;
+        margin-left: 25px;
     }
     #botones {
         display: flex;
         flex-direction: column;
-        margin-left: 15px;
+        margin-left: 20px;
     }
     #btnCifrar {
-        width: 330px;
+        width: 400px;
     }
     #btnDescifrar {
-        width: 330px;
+        width: 400px;
     }
     #seccionDerecha {
-        width: 330px;
+        width: 400px;
         margin-top: 130px;
-        margin-left:15px;
+        margin-left:20px;
     }
     #muñeco{
         display: none;
@@ -417,15 +417,17 @@ footer {
         width: 263px;
         height: 50px;
         text-align: center;
+        margin-left: 30px;
     }
     .parrafo2 {
         width: 263px;
         height: 48px;
         padding-top: 15px;
+        margin-left: 30px;
     }
     #areaPresentacion {
-        width: 330px;
-        padding: 10px;
+        width: 400px;
+        padding-left: 20px;
         word-wrap: break-word;
     }
     
@@ -441,8 +443,8 @@ footer {
 
     #btnCopiar {
         position: relative;
-        width: 300px;
-        margin-left: 12px;
+        width: 350px;
+        margin-left: 25px;
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
