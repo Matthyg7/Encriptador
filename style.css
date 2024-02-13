@@ -399,7 +399,7 @@ footer {
         width: 360px;
     }
     #seccionDerecha {
-        width: 400px;
+        width: 360px;
         margin-top: 130px;
         margin-left:20px;
     }
@@ -411,28 +411,28 @@ footer {
         text-align: center;
         width: 300px;
         height: 69px;
-        padding: 30px ;
+        padding: 15px ;
     }
     .parrafo1 {
         width: 263px;
         height: 50px;
         text-align: center;
-        margin-left: 30px;
+        margin-left: 5px;
     }
     .parrafo2 {
         width: 263px;
         height: 48px;
         padding-top: 15px;
-        margin-left: 30px;
+        margin-left: 5px;
     }
     #areaPresentacion {
-        width: 400px;
+        width: 360px;
         padding-left: 20px;
         word-wrap: break-word;
     }
     
     #areaPresentacion .textoCifrado {
-        width: 380px;
+        width: 340px;
         box-sizing: border-box;
         word-wrap: break-word; /* Romper palabras largas para evitar que sobresalgan */
         display: flex;
