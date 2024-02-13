@@ -380,7 +380,7 @@ footer {
         height: 200px;
     }
     #textoOriginal {
-        width: 460px;
+        width: 440px;
         margin-left: 15px;
     }
     .validacion {
@@ -393,13 +393,13 @@ footer {
         margin-left: 20px;
     }
     #btnCifrar {
-        width: 440px;
+        width: 420px;
     }
     #btnDescifrar {
         width: 440px;
     }
     #seccionDerecha {
-        width: 460px;
+        width: 440px;
         margin-top: 130px;
         margin-left:20px;
     }
@@ -432,7 +432,7 @@ footer {
     }
     
     #areaPresentacion .textoCifrado {
-        width: auto;
+        width: 460px;
         box-sizing: border-box;
         word-wrap: break-word; /* Romper palabras largas para evitar que sobresalgan */
         display: flex;
