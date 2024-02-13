@@ -380,7 +380,7 @@ footer {
         height: 200px;
     }
     #textoOriginal {
-        width: 440px;
+        width: 460px;
         margin-left: 15px;
     }
     .validacion {
@@ -393,13 +393,13 @@ footer {
         margin-left: 20px;
     }
     #btnCifrar {
-        width: 400px;
+        width: 440px;
     }
     #btnDescifrar {
-        width: 400px;
+        width: 440px;
     }
     #seccionDerecha {
-        width: 400px;
+        width: 460px;
         margin-top: 130px;
         margin-left:20px;
     }
@@ -411,7 +411,7 @@ footer {
         text-align: center;
         width: 300px;
         height: 69px;
-        padding: 30px 15px;
+        padding: 30px ;
     }
     .parrafo1 {
         width: 263px;
@@ -426,7 +426,7 @@ footer {
         margin-left: 30px;
     }
     #areaPresentacion {
-        width: 400px;
+        width: 460px;
         padding-left: 20px;
         word-wrap: break-word;
     }
@@ -443,7 +443,7 @@ footer {
 
     #btnCopiar {
         position: relative;
-        width: 350px;
+        width: 400px;
         margin-left: 25px;
         justify-content: center;
         flex-wrap: wrap;
@@ -457,8 +457,9 @@ footer {
         padding-bottom: 35px;
     }
     footer{
-        width: 280px;
+        width: 480px;
         text-align: center;
+        margin-top: 40px;
         margin-left: 20px;
     }
 }
