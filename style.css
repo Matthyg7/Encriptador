@@ -1,137 +1,448 @@
+:root {
+    --color-background: #f3f5fc;
+    --color-textarea: #0A3871;
+    --color-blanco: #ffffff;
+    --color-seccionDerecha: #f7f7f7;
+    --color-parrafo1: #343A40;
+    --color-parrafo2: #495057;
+    --color-btnDescrifrar: #D8DFE8;
+}
+
+/* fuentes */
+@font-face {
+    font-family: "inter 700";
+    src: url(https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap)
+}
+
+@font-face {
+    font-family: "inter 400";
+    src: url(https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap);
+}
+
 /* Estilos generales */
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;/* Reemplaza 'Arial' con la fuente sugerida por Figma*/
-    background-color: #f7f7f7;
+    background-color: var(--color-background);
+    font-family: 'Inter', sans-serif;
 }
 
-#titulo-presentacion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header {
+    display: flex
 }
 
-header{
-    margin: 20px 0;
-    justify-content: center;
-    text-align: center;
-}
-#contenido{
+#contenido {
     width: 100%;
 }
+
 .contenedorPrincipal {
     display: flex;
-    height: 400px;
-    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    width: 120px;
+    height: 48px;
+    margin-top: 40px;
+    margin-left: 40px;
+    gap: 40px;
 }
 
 /* Estilo de la sección izquierda (donde se inserte el texto) */
-.seccionIzquierda {
-    width: 50%;
-    flex: 1;
-    padding: 20px;
-    background-color: #ffffff; /* Fondo blanco para la sección izquierda */
-    border: 1px solid #ccc;
-    align-items: flex-start;
-    margin: 10px;
-}
-.seccionIzquierda p{
-    font-weight: bold;
-    padding: 25px;
-}
-
-/* Estilo de la sección derecha (donde se muestra el resultado) */
-.seccionDerecha {
-    width: 50%;
-    flex: 1;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-left: 1px solid #ccc;
+.validacion {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 229px;
+    height: 18px;
+    margin-top: 230px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+    gap: 8px;
 }
 
+.validacion img {
+    width: 16px;
+    height: 16px;
+}
+
+.validacion p {
+    display: inline-flex;
+    width: 205px;
+    height: 18px;
+    opacity: 80%;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--color-parrafo2);
+
+}
 
 /* Estilos para el textarea */
 #textoOriginal {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px; /* Tamaño de fuente sugerido por Figma */
+    font-family: 'Inter', sans-serif;
+    width: 577px;
+    height: 48px;
+    margin-top: 50px;
+    margin-left: 240px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--color-textarea);
+    border: none;
+    background-color: var(--color-background);
 }
 
+#textoOriginal::placeholder {
+    font-family: 'Inter';
+    color: var(--color-textarea);
+}
+
+.textareaContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    min-height: 50px;
+    resize: none; /* Evitar que se redimensione manualmente */
+}
+
+/* Estilo de la sección derecha (donde se muestra el resultado) */
+
 /* Estilo para el área de presentación */
-#areaPresentacion {
-    width: 98%;
-    height: 100%;
-    border: 1px solid #ccc;
-    padding: 10px;
-    overflow-y: auto;
-    font-size: 14px; /* Tamaño de fuente sugerido por Figma */
-    margin-bottom: 10px; /* Espaciado entre el área de presentación y el botón Copiar */
-    position: relative; /* Asegura que la posición de la imagen sea relativa al área de presentación */
+#seccionDerecha {
+    width: 400px;
+    height: 650px;
+    margin-top: -48px;
+    margin-left: 50px;
+    border-radius: 32px;
+    background-color: var(--color-blanco);
+    box-shadow: 0px 24px 32px -8px #00000014;
 }
 
 /* Estilo para la imagen */
-#imagenPresentacion {
-    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    max-height: 100%; /* Ajusta la imagen al alto del contenedor */
-    position: absolute; /* Posiciona la imagen de manera absoluta dentro del área de presentación */
-    top: 0;
-    left: 0;
+#muñeco {
+    width: 336px;
+    height: 270px;
+    margin-top: 10px;
+}
+
+.mensajes {
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 336px;
+    height: 122px;
+    gap: 16px;
+}
+
+/*estilos para parrafo1 */
+.parrafo1 {
+    width: 336px;
+    height: 58px;
+    font-family: "Inter 700", sans-serif;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+    color: var(--color-parrafo1);
+    line-height: bold;
+}
+
+/* Estilo para parrafo2 */
+.parrafo2 {
+    width: 336px;
+    height: 48px;
+    padding-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-parrafo2);
+
 }
 
 /* Estilos para los botones */
 button {
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave de color y transformación */
+    flex-grow: 1;
+    /* Los botones tomarán todo el espacio disponible */
+}
+
+#botones {
+    display: flex;
+    width: 680px;
+    height: 67px;
+    margin-left: 200px;
+    gap: 24px;
 }
 
 /* Estilo para el botón Cifrar */
 #btnCifrar {
-    background-color: #4CAF50; /* Verde */
-    color: #fff;
+    background-color: var(--color-textarea);
+    color: var(--color-blanco);
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 19.36px;
+    text-align: center;
 }
 
 /* Estilo para el botón Descifrar */
 #btnDescifrar {
-    background-color: #2196F3; /* Azul */
-    color: #fff;
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px;
+    gap: 8px;
+    background: var(--color-btnDescrifrar);
+    border: 1px solid var(--color-textarea);
+    color: var(--color-textarea);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
 }
 
 /* Estilo para el botón Copiar */
 #btnCopiar {
-    background-color: #FF9800; /* Naranja */
-    color: #fff;
+    display: none; /* Ocultar el botón inicialmente */
+    width: 336px;
+    height: 67px;
+    margin-left: 30px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-textarea);
+    color: var(--color-textarea);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    position: relative;
+}
+
+.mostrar-btn {
+    display: flex; /* Mostrar el botón */
+}
+
+#btnCopiar:hover {
+    transform: scale(1.05);/* Aumenta ligeramente el tamaño del boton */
 }
 
 /* Animación al pasar el cursor sobre los botones */
 button:hover {
-    background-color: #555; /* Cambia el color al pasar el cursor */
-    transform: scale(1.05); /* Escala ligeramente el botón */
-}
-.textoCifrado {
-    color: green;
+    background-color: #555;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del boton */
 }
 
-.textoDescifrado {
-    color: blue;
+/* Estilo para texto cifrado/descifrado */
+#areaPresentacion {
+    width: 336px;
+    height: 600px;
+    padding: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-parrafo2);
+}
+
+#areaPresentacion .textoCifrado {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word; /* Romper palabras largas para evitar que sobresalgan */
+}
+#seccionDerecha, #areaPresentacion{
+    height: auto;
+    padding-bottom: 35px;
 }
 
 /* Pie de pagina */
-footer{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+    bottom: 0;
+    width: 100%;
+    color: var(--color-textarea);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Tamaños para tablet */
+@media (max-width:768px){
+    .contenedorPrincipal {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        margin-top: 73.42px;
+        margin-left: 40px;
+    }
+    #textoOriginal {
+        width: 688px;
+        margin-top: 90px;
+        margin-left: 40px;
+    }
+    .validacion {
+        margin-top: 140px;
+        margin-left: 40px;
+    }
+    #botones {
+        width: 688px;
+        margin-left: 40px;
+    }
+    #btnCifrar {
+        width: 332px;
+    }
+    #btnDescifrar {
+        width: 332px;
+    }
+    #seccionDerecha {
+        width: 688px;
+        margin-top: 68px;
+        margin-left:40px;
+    }
+    #muñeco{
+      display: none;
+    }
+    .mensajes {
+        justify-content: center;
+       text-align: center;
+        width: 624px;
+        height: 69px;
+        padding-top: 30px;
+        margin: 0;
+    }
+    .parrafo1 {
+        width: 624px;
+        height: 29px;
+        text-align: center;
+    }
+    .parrafo2 {
+        width: 624px;
+        height: 24px;
+    }
+    #areaPresentacion {
+        width: 624px;
+        padding: 15px 20px;
+        word-wrap: break-word;
+    }
+    
+    #areaPresentacion .textoCifrado {
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word; /* Romper palabras largas para evitar que sobresalgan */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    #btnCopiar {
+        position: relative;
+        width: 630px;
+        margin-left: 28px;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    #seccionDerecha, #areaPresentacion{
+        height: auto;
+        padding-bottom: 35px;
+    }
+}
+/* Tamaños para celulares */
+@media (max-width:375px){
+    .contenedorPrincipal {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        margin: 20px 0 0 0;
+    }
+    #textoOriginal {
+        width: auto;
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+    .validacion {
+        margin-top: 140px;
+        margin-left: 15px;
+    }
+    #botones {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    #btnCifrar {
+        width: auto;
+    }
+    #btnDescifrar {
+        width: auto;
+    }
+    #seccionDerecha {
+        width: auto;
+        margin-top: 130px;
+        margin-left:15px;
+    }
+    #muñeco{
+        display: none;
+    }
+    .mensajes {
+        justify-content: center;
+       text-align: center;
+        width: 236px;
+        height: 69px;
+        padding: 30px 0 0 10px;
+    }
+    .parrafo1 {
+        width: 263px;
+        height: 50px;
+        text-align: center;
+    }
+    .parrafo2 {
+        width: 263px;
+        height: 48px;
+        padding-top: 15px;
+    }
+    #areaPresentacion {
+        width: auto;
+        padding: 15px 20px;
+        word-wrap: break-word;
+    }
+    
+    #areaPresentacion .textoCifrado {
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word; /* Romper palabras largas para evitar que sobresalgan */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    #btnCopiar {
+        position: relative;
+        width: auto;
+        margin-left: 22px;
+        align-items: center;
+        padding: 0px 20px;
+    }
+    #seccionDerecha, #areaPresentacion{
+        height: auto;
+        padding-bottom: 35px;
+    }
+    footer{
+        width: auto;
+        text-align: center;
+        margin-left: 100px;
+    }
 }

@@ -50,6 +50,17 @@ function descifrarTexto() {
     areaPresentacion.className = "textoDescifrado";
 }
 
+function actualizarBotonCopiar() {
+    var areaPresentacion = document.getElementById("areaPresentacion");
+    var btnCopiar = document.getElementById("btnCopiar");
+
+    if (areaPresentacion.textContent.trim() !== "") {
+        btnCopiar.classList.add("mostrar-btn"); // Agregar la clase para mostrar el botón
+    } else {
+        btnCopiar.classList.remove("mostrar-btn"); // Quitar la clase para ocultar el botón
+    }
+}
+
 function copiarTexto() {
     let areaPresentacion = document.getElementById("areaPresentacion");
     let textoCopiar = areaPresentacion.innerText.trim();
@@ -60,24 +71,18 @@ function copiarTexto() {
     }
 
     navigator.clipboard.writeText(textoCopiar)
-        .then(function() {
+        .then(function () {
             alert("Texto copiado al portapapeles: " + textoCopiar);
             // Limpiar el textarea
             document.getElementById("textoOriginal").value = "";
         })
-        .catch(function(err) {
+        .catch(function (err) {
             console.error("Error al copiar el texto al portapapeles: ", err);
         });
 }
 
-// Función para insertar la imagen en el área de presentación
-function insertarImagen() {
-    let areaPresentacion = document.getElementById("areaPresentacion");
-    let imagen = document.createElement("img");
-    imagen.src = "ruta_de_tu_imagen.jpg"; // Reemplaza con la ruta de tu imagen descargada
-    imagen.alt = "Descripción de la imagen"; // Agrega una descripción para accesibilidad
-    imagen.id = "imagenPresentacion";
-    areaPresentacion.innerHTML = ""; // Limpia el contenido actual del área de presentación
-    areaPresentacion.appendChild(imagen); // Inserta la imagen en el área de presentación
+function autoResize(textarea) {
+    textarea.style.height = 'auto'; // Restablecer la altura a automática
+    textarea.style.height = textarea.scrollHeight + 'px'; // Establecer la altura al desplazamiento del contenido
 }
 

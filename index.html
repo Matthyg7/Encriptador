@@ -5,45 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cifrador y Descifrador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Encriptador de texto</title>
 </head>
 
 <body>
-    <header id="titulo-presentación">
-        <section>
-            <h1>Cifrador y Descifrador</h1>
-        </section>
+    <header>
+        <img class="logo" src="Encriptador de texto/Encriptador-de-texto/Logo.png" alt="Logo">
     </header>
 
-    <main id="contenido">
-        <div class="contenedorPrincipal">
-            <!-- Campo para cifrar y descifrar -->
-            <div class="seccionIzquierda">
-                <label for="textoOriginal">Texto:</label>
-                <textarea id="textoOriginal" placeholder="Ingrese su texto aquí"></textarea>
+    <main id="contenido" class="contenedorPrincipal">
+        <!-- Campo para cifrar y descifrar -->
+        <div class="seccionIzquierda">
+            <label for="textoOriginal"></label>
+            <textarea id="textoOriginal" placeholder="Ingrese su texto aquí" oninput="autoResize(this)"
+                maxlength="300"></textarea>
 
-                <!-- Botones -->
-                <button id="btnCifrar" onclick="cifrarTexto()">Cifrar</button>
-                <button id="btnDescifrar" onclick="descifrarTexto()">Descifrar</button>
-
-                <!-- Mensaje de validación -->
-                <p>No se aceptarán mayúsculas ni caracteres especiales.</p>
+            <!-- Mensaje de validación -->
+            <div class="validacion">
+                <img src="Encriptador de texto/Encriptador-de-texto/bi_exclamation-circle-fill.png"alt="exclamación">
+                <p>Solo letras minúsculas y sin acentos</p>
             </div>
 
-            <div class="seccionDerecha">
-                <!-- Área de presentación de texto -->
-                <div id="areaPresentacion"></div>
-
-                <!-- Botón de copia -->
-                <button id="btnCopiar" onclick="copiarTexto()">Copiar</button>
-                <button onclick="insertarImagen()">Insertar Imagen</button>
+            <!-- Botones -->
+            <div id="botones">
+                <button id="btnCifrar" onclick="cifrarTexto()">Encriptar</button>
+                <button id="btnDescifrar" onclick="descifrarTexto()">Desencriptar</button>
             </div>
+        </div>
+
+        <div id="seccionDerecha">
+            <!-- Área de presentación de texto -->
+            <div id="areaPresentacion">
+                <img id="muñeco" src="Encriptador de texto/Encriptador-de-texto/Muñeco.png" alt="Muñeco">
+                <div class="mensajes">
+                    <h2 class="parrafo1">Ningún mensaje fue encontrado</h2>
+                    <p class="parrafo2">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+            <!-- Botón de copia -->
+            <button id="btnCopiar" onclick="copiarTexto()" style="display: none;">Copiar</button>
         </div>
     </main>
 
     <!-- Pie de página -->
     <footer>
-        <p>Desarrollado por Gómez, Elías Matías, &copy; 2024</p>
+        <h4>Desarrollado por Gómez, Elías Matías. © 2024</h4>
     </footer>
     <!--ads-->
     <script src="script.js"></script>
