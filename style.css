@@ -370,7 +370,7 @@ footer {
     }
 }
 /* Tamaños para celulares */
-@media (max-width:350px){
+@media (max-width:375px){
     .contenedorPrincipal {
         display: flex;
         flex-direction: column;
@@ -380,7 +380,7 @@ footer {
         height: 150px;
     }
     #textoOriginal {
-        width: 350px;
+        width: 380px;
         margin-left: 13px;
     }
     .validacion {
@@ -393,13 +393,13 @@ footer {
         margin-left: 15px;
     }
     #btnCifrar {
-        width: 300px;
+        width: 330px;
     }
     #btnDescifrar {
-        width: 300px;
+        width: 330px;
     }
     #seccionDerecha {
-        width: 310px;
+        width: 330px;
         margin-top: 130px;
         margin-left:15px;
     }
@@ -409,9 +409,9 @@ footer {
     .mensajes {
         justify-content: center;
         text-align: center;
-        width: 230px;
+        width: 300px;
         height: 69px;
-        padding: 30px 0;
+        padding: 30px 15px;
     }
     .parrafo1 {
         width: 263px;
@@ -424,7 +424,7 @@ footer {
         padding-top: 15px;
     }
     #areaPresentacion {
-        width: 300px;
+        width: 330px;
         padding: 10px;
         word-wrap: break-word;
     }
@@ -441,7 +441,7 @@ footer {
 
     #btnCopiar {
         position: relative;
-        width: 280px;
+        width: 300px;
         margin-left: 12px;
         justify-content: center;
         flex-wrap: wrap;
