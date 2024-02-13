@@ -1,3 +1,15 @@
+// Función para actualizar el contador de caracteres restantes
+function actualizarContador() {
+    let textoOriginal = document.getElementById("textoOriginal").value;
+    let caracteresRestantes = 500 - textoOriginal.length;
+    let contadorCaracteres = document.getElementById("contadorCaracteres");
+    contadorCaracteres.textContent = caracteresRestantes + " caracteres restantes";
+}
+
+// Escuchar el evento de entrada en el área de texto
+let textarea = document.getElementById("textoOriginal");
+textarea.addEventListener("input", actualizarContador);
+
 function cifrarTexto() {
     let inputText = document.getElementById("textoOriginal").value;
 
@@ -22,6 +34,8 @@ function cifrarTexto() {
     let areaPresentacion = document.getElementById("areaPresentacion");
     areaPresentacion.innerText = encryptedText;
     areaPresentacion.className = "textoCifrado";
+
+    actualizarBotonCopiar();
 }
 
 function descifrarTexto() {
@@ -48,18 +62,30 @@ function descifrarTexto() {
     let areaPresentacion = document.getElementById("areaPresentacion");
     areaPresentacion.innerText = decryptedText;
     areaPresentacion.className = "textoDescifrado";
+
+    actualizarBotonCopiar();
 }
 
-function actualizarBotonCopiar() {
-    var areaPresentacion = document.getElementById("areaPresentacion");
-    var btnCopiar = document.getElementById("btnCopiar");
+function mostrarBotonCopiar() {
+    let btnCopiar = document.getElementById("btnCopiar");
+    btnCopiar.style.display = "flex";
+}
 
-    if (areaPresentacion.textContent.trim() !== "") {
-        btnCopiar.classList.add("mostrar-btn"); // Agregar la clase para mostrar el botón
+function ocultarBotonCopiar() {
+    let btnCopiar = document.getElementById("btnCopiar");
+    btnCopiar.style.display = "none";
+}
+
+// Lógica para mostrar u ocultar el botón según la presencia de texto en el área de presentación
+function actualizarBotonCopiar() {
+    let areaPresentacion = document.getElementById("areaPresentacion");
+    if (areaPresentacion.innerText.trim() !== "") {
+        mostrarBotonCopiar();
     } else {
-        btnCopiar.classList.remove("mostrar-btn"); // Quitar la clase para ocultar el botón
+        ocultarBotonCopiar();
     }
 }
+
 
 function copiarTexto() {
     let areaPresentacion = document.getElementById("areaPresentacion");
@@ -85,4 +111,5 @@ function autoResize(textarea) {
     textarea.style.height = 'auto'; // Restablecer la altura a automática
     textarea.style.height = textarea.scrollHeight + 'px'; // Establecer la altura al desplazamiento del contenido
 }
+
 

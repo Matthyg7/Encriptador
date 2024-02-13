@@ -44,11 +44,8 @@ header {
 
 .logo {
     display: flex;
-    width: 120px;
-    height: 48px;
-    margin-top: 40px;
-    margin-left: 40px;
-    gap: 40px;
+    width: 200px;
+    height: 200px;
 }
 
 /* Estilo de la sección izquierda (donde se inserte el texto) */
@@ -85,8 +82,8 @@ header {
     font-family: 'Inter', sans-serif;
     width: 577px;
     height: 48px;
-    margin-top: 50px;
-    margin-left: 240px;
+    margin-top: 10px;
+    margin-left: 200px;
     font-size: 32px;
     font-weight: 400;
     line-height: 48px;
@@ -113,13 +110,20 @@ textarea {
     resize: none; /* Evitar que se redimensione manualmente */
 }
 
+#contadorCaracteres{
+    text-align: center;
+    font-family: 'Inter';
+    color: var(--color-parrafo2);
+    font-size: 15px;
+}
+
 /* Estilo de la sección derecha (donde se muestra el resultado) */
 
 /* Estilo para el área de presentación */
 #seccionDerecha {
     width: 400px;
     height: 650px;
-    margin-top: -48px;
+    margin-top: -150px;
     margin-left: 50px;
     border-radius: 32px;
     background-color: var(--color-blanco);
@@ -168,8 +172,7 @@ textarea {
 
 /* Estilos para los botones */
 button {
-    flex-grow: 1;
-    /* Los botones tomarán todo el espacio disponible */
+    flex-grow: 1; /* Los botones tomarán todo el espacio disponible */
 }
 
 #botones {
@@ -220,7 +223,7 @@ button {
     width: 336px;
     height: 67px;
     margin-left: 30px;
-    padding: 24px;
+    padding: 30px;
     border-radius: 24px;
     background-color: var(--color-blanco);
     border: 1px solid var(--color-textarea);
@@ -231,11 +234,13 @@ button {
     line-height: 19px;
     letter-spacing: 0em;
     text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
     position: relative;
 }
 
 .mostrar-btn {
-    display: flex; /* Mostrar el botón */
+    display: flex ; /* Mostrar el botón */
 }
 
 #btnCopiar:hover {
@@ -284,18 +289,19 @@ footer {
     .contenedorPrincipal {
         display: flex;
         flex-direction: column;
+        width: auto;
     }
-    .logo{
-        margin-top: 73.42px;
-        margin-left: 40px;
+    .logo {
+        width: 200px;
+        height: 200px;
     }
     #textoOriginal {
         width: 688px;
-        margin-top: 90px;
+        margin-top: 5px;
         margin-left: 40px;
     }
     .validacion {
-        margin-top: 140px;
+        margin-top: 120px;
         margin-left: 40px;
     }
     #botones {
@@ -350,9 +356,12 @@ footer {
     }
     #btnCopiar {
         position: relative;
-        width: 630px;
-        margin-left: 28px;
+        width: 332px;
+        margin-left: 150px;
+        justify-content: center;
         align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
         padding: 0px 20px;
     }
     #seccionDerecha, #areaPresentacion{
@@ -361,21 +370,21 @@ footer {
     }
 }
 /* Tamaños para celulares */
-@media (max-width:375px){
+@media (max-width:320px){
     .contenedorPrincipal {
         display: flex;
         flex-direction: column;
     }
-    .logo{
-        margin: 20px 0 0 0;
+    .logo {
+        width: 150px;
+        height: 150px;
     }
     #textoOriginal {
-        width: auto;
-        margin-top: 50px;
+        width: 300px;
         margin-left: 15px;
     }
     .validacion {
-        margin-top: 140px;
+        margin-top: 100px;
         margin-left: 15px;
     }
     #botones {
@@ -384,13 +393,13 @@ footer {
         margin-left: 15px;
     }
     #btnCifrar {
-        width: auto;
+        width: 280px;
     }
     #btnDescifrar {
-        width: auto;
+        width: 280px;
     }
     #seccionDerecha {
-        width: auto;
+        width: 280px;
         margin-top: 130px;
         margin-left:15px;
     }
@@ -399,10 +408,10 @@ footer {
     }
     .mensajes {
         justify-content: center;
-       text-align: center;
-        width: 236px;
+        text-align: center;
+        width: 230px;
         height: 69px;
-        padding: 30px 0 0 10px;
+        padding: 30px 0;
     }
     .parrafo1 {
         width: 263px;
@@ -415,13 +424,13 @@ footer {
         padding-top: 15px;
     }
     #areaPresentacion {
-        width: auto;
-        padding: 15px 20px;
+        width: 280px;
+        padding: 10px;
         word-wrap: break-word;
     }
     
     #areaPresentacion .textoCifrado {
-        width: 100%;
+        width: auto;
         box-sizing: border-box;
         word-wrap: break-word; /* Romper palabras largas para evitar que sobresalgan */
         display: flex;
@@ -429,20 +438,25 @@ footer {
         align-items: center;
         margin-bottom: 10px;
     }
+
     #btnCopiar {
         position: relative;
-        width: auto;
-        margin-left: 22px;
+        width: 260px;
+        margin-left: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
+        text-align: center;
         padding: 0px 20px;
     }
+
     #seccionDerecha, #areaPresentacion{
         height: auto;
         padding-bottom: 35px;
     }
     footer{
-        width: auto;
+        width: 280px;
         text-align: center;
-        margin-left: 100px;
+        margin-left: 20px;
     }
 }

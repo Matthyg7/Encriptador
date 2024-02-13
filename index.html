@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <img class="logo" src="Encriptador de texto/Encriptador-de-texto/Logo.png" alt="Logo">
+        <img class="logo" src="matias_logo_blanco-removebg-preview.png" alt="Logo">
     </header>
 
     <main id="contenido" class="contenedorPrincipal">
@@ -24,10 +24,11 @@
             <label for="textoOriginal"></label>
             <textarea id="textoOriginal" placeholder="Ingrese su texto aquí" oninput="autoResize(this)"
                 maxlength="300"></textarea>
+                <div id="contadorCaracteres">500 caracteres restantes</div>
 
             <!-- Mensaje de validación -->
             <div class="validacion">
-                <img src="Encriptador de texto/Encriptador-de-texto/bi_exclamation-circle-fill.png"alt="exclamación">
+                <img src="bi_exclamation-circle-fill.png"alt="Advertencia">
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
 
@@ -41,14 +42,14 @@
         <div id="seccionDerecha">
             <!-- Área de presentación de texto -->
             <div id="areaPresentacion">
-                <img id="muñeco" src="Encriptador de texto/Encriptador-de-texto/Muñeco.png" alt="Muñeco">
+                <img id="muñeco" src="Muñeco.png" alt="Muñeco">
                 <div class="mensajes">
                     <h2 class="parrafo1">Ningún mensaje fue encontrado</h2>
                     <p class="parrafo2">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
             </div>
             <!-- Botón de copia -->
-            <button id="btnCopiar" onclick="copiarTexto()" style="display: none;">Copiar</button>
+            <button id="btnCopiar" onclick="copiarTexto()">Copiar</button>
         </div>
     </main>
 
