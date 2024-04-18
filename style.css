@@ -484,6 +484,7 @@ footer h4,p{
     }
     footer{
         width: 400px;
+        height: auto;
         flex-direction: column;
     }
 }
